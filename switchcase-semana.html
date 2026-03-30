@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando switch/case</title>
+</head>
+<body>
+    <h1>Testando condicional Switch/Case</h1>
+
+    <script>
+        let DiaSemana = parseInt(prompt("Digite com o numero do dia da semana:"))
+        let nomeDoDia;    
+
+        switch(DiaSemana){
+            case 1: nomeDoDia = "Domingo"
+            break;
+            case 2: nomeDoDia = "Segunda"
+            break;
+            case 3: nomeDoDia = "Terça"
+            break;    
+            case 4: nomeDoDia = "Quarta"
+            break;
+            case 5: nomeDoDia = "Quinta"
+            break;
+            case 6: nomeDoDia = "Sexta"
+            break;
+            case 7: nomeDoDia = "Sábado"
+            break;
+
+            default: nomeDoDia = "Dia inexistente"
+        }
+
+        document.write(nomeDoDia)
+
+    </script>
+
+</body>
+</html>

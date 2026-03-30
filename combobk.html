@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo BK</title>
+</head>
+<body>
+
+    <h1>Seu combo especial</h1>
+
+    <script>
+        let numCombo = parseInt(prompt("Digite a numero do seu combo:"))
+        let combo;
+
+        switch(numCombo){
+            case 1: combo = "-Um Wopper Furioso <br> -Batata frita média <br> -Um refri médio <br> R$28,90"
+            break;
+            case 2: combo = "-Mega Staker 2.0 <br> -Batata frita média <br> -Milk shake Morango médio <br> R$35,90"
+            break;
+            case 3: combo = "-King Bacon Chicken <br> -Batata frita com bacon e cheddar média <br> -Um refri médio <br> R$40,00"
+            break;
+            case 4: combo = "-Chicken jr <br> -Batata frita média <br> -Um refri médio <br> R$25,50"
+            break;
+            case 5: combo = "-Big King <br> -Batata frita média <br> -Milk shake Ovomaltine médio <br> R$30,90"
+            break;
+
+            default: combo = "Esse combo não faz parte da promoção!"
+    
+        }
+        document.write(combo)
+
+    </script>
+    
+</body>
+</html>
