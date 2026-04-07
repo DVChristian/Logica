@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repita comigo</title>
+</head>
+<body>
+    
+    <h1>Repita comigo</h1>
+
+    <h2>ATT 1</h2>
+
+    <script>
+        let valor1 = parseInt(prompt("Digite o primeiro valor:"))
+        let valor2 = parseInt(prompt("Digite o segundo valor:"))
+        let divisao = valor1 / valor2
+
+        if(valor2 <= 0){
+            for(let n = 0; valor2 <=0; n++){
+             valor2 = parseInt(prompt("Digite o segundo valor novamente:"))
+            }
+        }
+        else if(valor2 >=1)
+        {
+           valor2 = valor2
+        }
+
+        document.write("A divisão dos valores é:" + divisao)
+
+    </script>
+
+
+
+
+        
+
+</body>
+</html>
