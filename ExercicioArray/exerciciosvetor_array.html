@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Vetor & Array</title>
+</head>
+<body>
+        
+    <script>
+
+        function atividade1(){
+    //01) Faça um programa que leia 5 números inteiros e exiba-os na ordem inversa em que foram digitados.
+            let meuVetor = [2, 6, 8, 1, 9];
+
+            for(let i = meuVetor.length -1; i >= 0; i--)
+            {
+                console.log(meuVetor[i]);
+            }
+
+        }
+        //02) Escreva um programa que leia 10 números inteiros e exiba a soma deles.
+        function atividade2(){
+    
+          let numero = []
+        let soma = 0
+        for(let i = 0; i<10; i++)
+        {
+
+            numero[i] = parseInt(prompt("Digite um número"))
+            soma += numero[i]
+        }
+        console.log("Soma: "+ soma)
+        }
+
+    //03) Crie um programa que leia 7 números inteiros e exiba a média aritmética dos valores lidos.
+        function atividade3(){
+
+        let numero = []
+        let soma = 0
+        for(let i = 0; i< 7; i++)
+        {
+
+            numero[i] = parseInt(prompt("Digite um número"))
+            soma += numero[i]/7
+        }
+        console.log("média é: "+ soma.toFixed(2))
+
+        }
+    //04) Faça um programa que leia 5 números inteiros e exiba quantos deles são pares.
+        function atividade4(){
+        let numero = []
+        let pares = 0
+        for(let i = 0; i<5; i++)
+        {
+            numero[i] = parseInt(prompt("Digite um número"))
+            if(numero[i] %2 == 0)
+            {
+                pares ++    
+            }
+        }
+        console.log("Os números pares são: "+ pares)
+        }
+
+    //05) Escreva um programa que leia 5 números inteiros e exiba o maior e o menor valor digitado.
+        function atividade5()
+        {
+                    
+       let numeros = [0];
+
+      for (let i = 0; i < 5; i++) {
+        numeros[i] = parseInt(prompt("Digite um número"));
+      }
+
+      let maior = numeros[0];
+      let menor = numeros[0];
+
+      for (let i = 1; i < numeros.length; i++) {
+        if (numeros[i] > maior) {
+          maior = numeros[i];
+        }
+        if (numeros[i] < menor) {
+          menor = numeros[i];
+        }
+      }
+      console.log("Maior:", maior);
+      console.log("Menor:", menor);
+}
+
+//06) Crie um programa que leia 10 números inteiros e exiba-os em ordem crescente.
+            function atividade6()
+            {
+                let numeros = [100,40,30,12,56]
+
+                numeros.sort((a, b) => a - b)
+
+                console.log(numeros)
+
+            }
+
+//07) Faça um programa que leia 10 números inteiros e exiba quantos deles são positivos.
+         function atividade7()
+         {
+             let positivo = 0;
+            let meuVetor = []
+            for(let i = 0; i <= 10; i++){
+            meuVetor[i] = parseInt(prompt("Digite 10 numeros inteiros: "));
+            if(meuVetor[i] > 0){
+                positivo ++
+            }
+            }
+            console.log("Os numeros positivos são: " + positivo)
+         }
+//08) Escreva um programa que leia 5 números inteiros e calcule a média dos valores pares e a média dos valores ímpares.
+         function atividade8()
+         {
+            let numero = []
+        let pares = 0
+        let impares = 0
+        let somap = 0
+        let somai = 0
+        let mediap = 0
+        let mediai = 0
+        for(let i = 0; i<5; i++){
+            numero[i] = parseInt(prompt("Digite um número"))
+            if(numero[i] %2 == 0){
+                somap+= numero[i]
+                pares++
+            }else{
+                somai+= numero[i]
+                impares++
+            }
+            mediap=somap/pares
+            mediai=somai/impares
+        }
+        console.log("Média dos números pares: "+ mediap + "\nMédia dos números impares: "+mediai)
+         }
+         //09) Crie um programa que leia 10 números inteiros e exiba a quantidade de números positivos e a quantidade de números negativos.
+         function atividade9()
+         {
+        let positivo = 0;
+        let negativo = 0;
+        let meuVetor = [];
+        for (let i = 0; i <= 9; i++) {
+        meuVetor[i] = parseInt(prompt("Digite 10 numeros inteiros: "));
+        if (meuVetor[i] > 0) {
+          positivo++;
+        } else if (meuVetor[i] < 0) {
+          negativo++;
+        }
+      }
+      console.log("Os numeros positivos são: " + positivo);
+      console.log("Os numeros negativos são: " + negativo)
+        }
+//10)Faça um programa que leia 5 números inteiros e verifique se algum deles é igual a zero.
+        function atividade10()
+        {
+            let numero = []
+        let zero = 0
+        for(let i = 0; i<10; i++){
+            numero[i] = parseInt(prompt("Digite um número"))
+            if(numero[i] == 0){
+                zero++
+            }
+        }
+        console.log( zero + " números são iguais a zero")
+    }
+    function atividade11(){
+        let somaPositivos = 0;
+let somaNegativos = 0;
+let meuVetor = [];
+
+for (let i = 0; i <= 9; i++) {
+  meuVetor[i] = parseInt(prompt("Digite 10 números inteiros: "));
+
+  if (meuVetor[i] > 0) {
+    somaPositivos += meuVetor[i]; // soma os positivos
+  } else if (meuVetor[i] < 0) {
+    somaNegativos += meuVetor[i]; // soma os negativos
+  }
+}
+
+console.log("Soma dos números positivos: " + somaPositivos);
+console.log("Soma dos números negativos: " + somaNegativos);
+    }
+    //12) Crie um programa que leia 5 números inteiros e exiba-os em ordem decrescente.
+       function atividade12()
+       {
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        numeros.sort((a, b) => b - a)
+
+        console.log(numeros)
+       }
+       //13) Faça um programa que leia 10 números inteiros e exiba quantos deles estão no intervalo de 10 a 50.
+       function atividade13(){
+        let numero = []
+        let intervalo = 0
+        for(let i = 0; i<10; i++){
+            numero[i] = parseInt(prompt("Digite um número"))
+            if(numero[i]>=10 && numero[i]<=50){
+                intervalo++
+            }
+        }
+        console.log(intervalo + " números estão entra 10 e 50")
+       }
+       //14) Escreva um programa que leia 7 números inteiros e exiba apenas os números pares.
+       function atividade14(){
+        let numero = []
+        let pares = 0
+        for(let i = 0; i<7; i++)
+        {
+            numero[i] = parseInt(prompt("Digite um número"))
+            if(numero[i] %2 == 0)
+            {
+                pares ++    
+            }
+        }
+        console.log("Os números pares são: "+ pares)
+       }
+       //15) Crie um programa que leia 5 nomes e exiba-os em ordem alfabética.
+       function atividade15(){
+            let nomes = ["soares", "vinicius", "Gabriel", "Fernanda", "Alice"]
+
+            nomes.sort((a, b) => a.localeCompare(b));
+       
+            console.log(nomes)
+       }
+
+       //16) Faça um programa que leia uma matriz 3x3 de números inteiros e exiba a matriz na tela.
+function atividade16(){
+
+const matriz = [];
+
+for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);                
+}
+}
+
+//17) Escreva um programa que leia uma matriz 2x2 de números inteiros e calcule a soma de todos os elementos.
+function atividade17()
+{
+    const matriz = [];
+    let soma = 0
+    for (let i = 0; i < 2; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 2; i++) {
+  let linha = "";
+  for (let j = 0; j < 2; j++) {
+    linha += matriz[i][j] + "  ";  
+    soma += matriz[i][j]
+  }
+  console.log(linha);   
+}
+console.log("Soma total: " + soma);
+}  
+
+//18) Crie um programa que leia uma matriz 3x3 de números inteiros e exiba a soma dos elementos da diagonal principal.
+function atividade18()
+{
+      const matriz = [];
+    let soma = 0
+    for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}
+for (let i = 0; i < 3; i++) {
+  soma += matriz[i][i];
+}
+console.log("Soma total: " + soma);
+}
+
+//19) Faça um programa que leia duas matrizes 2x2 de números inteiros e exiba a soma das duas matrizes.
+function atividade19(){
+    const matriz1 = [];
+    let soma1 = 0     
+    for (let i = 0; i < 2; i++) {
+  matriz1[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz1[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha1 = "";
+  for (let j = 0; j < 2; j++) {
+    linha1 += matriz1[i][j] + "  ";
+    soma1 += matriz1[i][j]   
+  }
+  console.log(linha1);  
+}
+
+const matriz2 = []
+let soma2 = 0
+for (let i = 0; i < 2; i++) {
+  matriz2[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz2[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha2 = "";
+  for (let j = 0; j < 2; j++) {
+    linha2 += matriz2[i][j] + "  ";
+    soma2 += matriz2[i][j]   
+  }
+  console.log(linha2);  
+}
+let somaTotal= soma1 + soma2
+console.log("Soma total: " + somaTotal);
+
+}
+
+//20) Escreva um programa que leia uma matriz 3x3 de números inteiros e exiba o maior valor presente na matriz.
+function atividade20(){
+
+    const matriz = []; 
+    for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}
+
+   let maior = matriz[0][0];         
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {  
+    if (matriz[i][j] > maior) {
+      maior = matriz[i][j];       
+    }
+  }
+}   
+
+  console.log(maior);
+}
+
+//21) Crie um programa que leia uma matriz 4x4 de números inteiros e exiba a média aritmética dos elementos.
+function atividade21()
+{
+    const matriz = [];
+    let soma = 0
+    for (let i = 0; i < 4; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 4; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 4; i++) {
+  let linha = "";
+  for (let j = 0; j < 4; j++) {
+    linha += matriz[i][j] + "  ";  
+    soma += matriz[i][j]/16
+  }
+  console.log(linha);   
+}
+console.log("Soma total: " + soma.toFixed(3));
+}
+
+//22) Faça um programa que leia duas matrizes 2x2 de números inteiros e exiba o produto entre elas.
+function atividade22()
+{
+    const matriz = [];
+    let soma = 1
+    for (let i = 0; i < 2; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 2; i++) {
+  let linha = "";
+  for (let j = 0; j < 2; j++) {
+    linha += matriz[i][j] + "  ";  
+    soma *= matriz[i][j]
+  }
+  console.log(linha);   
+}
+console.log("O produto total: " + soma);
+
+}
+
+//23) Escreva um programa que leia uma matriz 3x3 de números inteiros e exiba o menor valor presente na matriz.
+ function atividade23(){
+const matriz = [];
+      for (let i = 0; i < 3; i++) {
+        matriz[i] = [];
+        for (let j = 0; j < 3; j++) {
+          matriz[i][j] = parseInt(prompt("Digite o elemento [${i}][${j}]:"));
+        }
+      }
+
+      for (let i = 0; i < 3; i++) {
+        let linha = "";
+        for (let j = 0; j < 3; j++) {
+          linha += matriz[i][j] + "  ";
+        }
+        console.log(linha);
+      }
+
+      let menor = matriz[0][0];
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          if (matriz[i][j] < menor) {
+            menor = matriz[i][j];
+          }
+        }
+      }
+
+      console.log(menor);
+
+ }
+
+ //24) Crie um programa que leia uma matriz 3x3 de números inteiros e verifique se ela é simétrica (igual à sua transposta).
+ function atividade24(){
+    const matriz = []; 
+    for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}       
+
+    let simetria = true
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {  
+    if(matriz[i][j] != matriz[i][j])
+  {
+    simetria = false
+  }
+  }
+}   
+if ( simetria) 
+    {
+        console.log("É assimétrico")     
+    }
+    else
+    {
+        console.log("Não é assimétrico")
+    }
+
+ }
+
+//25) Faça um programa que leia uma matriz 4x4 de números inteiros e exiba a soma dos elementos de cada coluna.
+function atividade25(){
+    const matriz = [];
+    
+    for (let i = 0; i < 4; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 4; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let j = 0; j < 4; j++) {
+  let soma = 0
+  let linha = "";
+
+  for (let i = 0; i < 4; i++) {
+    linha += matriz[i][j] + "  ";  
+    soma += matriz[i][j]
+  }
+
+  console.log(linha);   
+  console.log("Soma total" + j + ":" + soma);
+}
+}
+
+//26) Escreva um programa que leia duas matrizes 2x2 de números inteiros e verifique se elas são iguais.
+function atividade26(){
+   const matriz1 = []; 
+    for (let i = 0; i < 2; i++) {
+  matriz1[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz1[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha1 = "";
+  for (let j = 0; j < 2; j++) {
+    linha1 += matriz1[i][j] + "  ";
+    
+  }
+  console.log(linha1);  
+}
+
+const matriz2 = []
+for (let i = 0; i < 2; i++) {
+  matriz2[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz2[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha2 = "";
+  for (let j = 0; j < 2; j++) {
+    linha2 += matriz2[i][j] + "  ";
+      
+  }
+  console.log(linha2);  
+}
+
+    let iguais = true
+
+for (let i = 0; i < 2; i++) {
+  for (let j = 0; j < 2; j++) {           
+    if (matriz1[i][j] != matriz2[i][j]) 
+    { 
+      iguais = false;                      
+    }
+  }
+}
+if (iguais) {
+  console.log("As matrizes são iguais");
+} else {
+  console.log("As matrizes são diferentes");
+}
+}
+
+//27) Crie um programa que leia uma matriz 3x3 de números inteiros e exiba o produto dos elementos da diagonal secundária.
+function atividade27(){
+   const matriz = [];
+    let soma = 0
+    for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}
+
+for (let i = 0; i < 3; i++) {
+  soma += matriz[i][2 - i];
+}
+
+console.log("Soma diagonal: " + soma);
+
+}
+
+//28)Faça um programa que leia uma matriz 4x4 de números inteiros e exiba o maior valor presente em cada linha.
+function atividade28(){
+
+ const matriz = []; 
+ for (let i = 0; i < 4; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 4; j++) {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+}
+ 
+for (let i = 0; i < 4; i++) {
+  let linha = "";
+  for (let j = 0; j < 4; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}
+           
+
+for (let i = 0; i < 4; i++) {
+
+let maior = matriz[0][0]; 
+
+  for (let j = 0; j < 4; j++) {  
+    if (matriz[i][j] > maior) {
+      maior = matriz[i][j];       
+    }
+  }
+
+  console.log(" linha 1 " + maior);
+
+}    
+}
+
+function atividade29()
+{
+
+  const matriz = []; 
+ for (let i = 0; i < 3; i++) {
+  matriz[i] = [];                    
+  for (let j = 0; j < 3; j++) 
+  {
+    matriz[i][j] = parseInt(prompt(`Digite o elemento [${i}][${j}]:`));
+  }
+
+}
+ 
+for (let i = 0; i < 3; i++) {
+  let linha = "";
+  for (let j = 0; j < 3; j++) {
+    linha += matriz[i][j] + "  ";  
+  }
+  console.log(linha);   
+}
+
+let identidade = true;
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    if (i == j && matriz[i][j] != 1) 
+    { 
+      identidade = false;
+    }
+    if (i != j && matriz[i][j] != 0) 
+    {  
+      identidade = false;
+    }
+  }
+}
+
+if (identidade) 
+{
+  console.log("está é uma matriz indentidade");
+} 
+else 
+{
+  console.log("está não é uma matriz indentidade");
+}
+
+}
+
+//30) Crie um programa que leia duas matrizes 2x2 de números inteiros e exiba a subtração
+function atividade30(){
+  const matriz1 = [];
+    let soma1 = 0     
+    for (let i = 0; i < 2; i++) {
+  matriz1[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz1[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha1 = "";
+  for (let j = 0; j < 2; j++) {
+    linha1 += matriz1[i][j] + "  ";
+    soma1 += matriz1[i][j]   
+  }
+  console.log(linha1);  
+}
+
+const matriz2 = []
+let soma2 = 0
+for (let i = 0; i < 2; i++) {
+  matriz2[i] = [];                    
+  for (let j = 0; j < 2; j++) {
+    matriz2[i][j] = parseInt(prompt(`Digite o elemento da matriz um[${i}][${j}]:`));
+  }
+} 
+for (let i = 0; i < 2; i++) {
+  let linha2 = "";
+  for (let j = 0; j < 2; j++) {
+    linha2 += matriz2[i][j] + "  ";
+    soma2 += matriz2[i][j]   
+  }
+  console.log(linha2);  
+}
+let somaTotal= soma1 - soma2
+console.log("Subtração total: " + somaTotal);
+
+}
+  atividade30()
+    </script>
+
+</body>
+</html>
